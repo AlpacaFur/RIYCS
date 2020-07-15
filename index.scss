@@ -5,6 +5,7 @@ $background-elevated: #32343D;
 $text: #cedcf0;
 $yellow: #EDC337;
 $green: #4DA147;
+// {% include header.scss %}
 @font-face {
   font-family: "Source Sans";
   src: url("/assets/fonts/sourcesans-regular.woff2") format("woff2");
@@ -18,56 +19,37 @@ $green: #4DA147;
 body {
   background-color: $background;
   margin: 0;
-  font-family: "Source Sans", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
+  color: $text;
 }
-nav {
-  display: flex;
-  background-color: $background-elevated;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 0px;
-  .links {
-    display: flex;
-    &:first-child>a {
-      padding-left: 60px;
-    }
-    &:last-child>a {
-      padding-right: 60px;
-    }
-    .recruit {
-      padding-right: 60px;
-      a {
-        padding: 6px 15px;
-        color: $background-elevated;
-        background-color: $yellow;
-        border-radius: 16px;
-      }
-    }
-    a {
-      color: $green;
-      font-weight: bold;
-      font-size: 50px;
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-}
-
 .intro {
   display: flex;
   justify-content: space-around;
   padding: 40px 100px;
+  @media (max-width: 1300px) {
+    flex-direction: column;
+  }
+  @media (max-width: 800px) {
+    padding: 20px 0px;
+  }
   .left, .right {
     flex: 1;
   }
   .left {
+    @media (max-width: 1300px) {
+      margin-bottom: 40px;
+    }
+    @media (max-width: 800px) {
+      padding-top: 25px;
+    }
     padding-top: 80px;
     h1 {
       text-align: center;
       color: $text;
       font-size: 50px;
+      @media (max-width: 800px) {
+        font-size: 34px;
+      }
       margin: 0px 0px 20px 0px;
     }
     .adjective {
@@ -83,59 +65,21 @@ nav {
       padding: 10px 18px;
       background-color: $background-elevated;
       border-radius: 15px;
+      @media (max-width: 800px) {
+        margin: 0 30px;
+        font-size: 24px;
+      }
     }
   }
   .right {
     display: flex;
     justify-content: center;
     >svg {
+      width: 100%;
       max-width: 584.5px;
+      @media (max-width: 800px) {
+        width: 75%;
+      }
     }
   }
 }
-
-// nav {
-//   background-color: #32343D;
-//   display: flex;
-//   height: 180px;
-//   align-items: center;
-//   justify-content: space-between;
-//   @media (max-width: 1190px) {
-//     background-color: red !important;
-//   }
-//   a {
-//     font-weight: bold;
-//     color: #4DA147;
-//     text-decoration: none;
-//     font-size: 48px;
-//     flex-grow: 0;
-//     text-align: center;
-//     white-space: nowrap;
-//     padding: 0px 3vw;
-//     &:hover {
-//       text-decoration: underline;
-//     }
-//   }
-//   .logo {
-//     flex-grow: 1;
-//     display: flex;
-//     justify-content: center;
-//     svg {
-//       cursor: pointer;
-//       width: 124px;
-//     }
-//   }
-//   div {
-//     display: flex;
-//   }
-//   .recruit {
-//     padding: 0px 3vw;
-//     a {
-//       padding: 5px 20px;
-//       border-radius: 15px;
-//       color: #32343D;
-//       background-color: #EDC337;
-//     }
-//   }
-//
-// }
