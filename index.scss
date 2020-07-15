@@ -70,6 +70,25 @@ body {
         font-size: 24px;
       }
     }
+    .recruit {
+      font-size: 50px;
+      font-weight: bold;
+      text-align: center;
+      background-color: $yellow;
+      color: $background-elevated;
+      display: inline-block;
+      margin: 40px 0 0 0;
+      padding: 7px 16px;
+      border-radius: 12px;
+      text-decoration: none;
+      @media (max-width: 800px) {
+        font-size: 34px;
+        margin-top: 20px;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
   .right {
     display: flex;
@@ -79,6 +98,7 @@ body {
       max-width: 584.5px;
       @media (max-width: 800px) {
         width: 75%;
+        height: 100%;
       }
     }
   }
