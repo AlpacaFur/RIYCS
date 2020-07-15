@@ -1,27 +1,9 @@
 ---
 ---
-$background: #2D2F38;
-$background-elevated: #32343D;
-$text: #cedcf0;
-$yellow: #EDC337;
-$green: #4DA147;
+
+// {% include base.scss %}
 // {% include header.scss %}
-@font-face {
-  font-family: "Source Sans";
-  src: url("/assets/fonts/sourcesans-regular.woff2") format("woff2");
-  font-weight: normal;
-}
-@font-face {
-  font-family: "Source Sans";
-  src: url("/assets/fonts/sourcesans-bold.woff2") format("woff2");
-  font-weight: bold;
-}
-body {
-  background-color: $background;
-  margin: 0;
-  font-family: "Source Sans", sans-serif;
-  color: $text;
-}
+
 .intro {
   display: flex;
   justify-content: space-around;
