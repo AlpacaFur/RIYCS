@@ -26,9 +26,23 @@
       <a href="/join" class="recruit">Join Us</a>
     </div>
   </nav>
-  <label for="flyoutCheckbox" class="hamburger">
-    <svg viewBox="0 0 24 24">
-      <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+  <input type="checkbox" id="flyout-menu-checkbox">
+  <label for="flyout-menu-checkbox" class="open-close-navbar" id="open-close-navbar">
+    <svg viewBox="0 0 44 35" class="hamburger">
+      <path d="M0 0h44v7H0V0" class="top"/>
+      <path d="M0 14h44v7H0v-7" class="middle-1"/>
+      <path d="M0 14h44v7H0v-7" class="middle-2"/>
+      <path d="M0 28h44v7H0z" class="bottom"/>
     </svg>
+    <!-- <svg viewBox="0 0 36 36" class="close-x">
+      <path d="M5 0l31 31-5 5L0 5l5-5" class="st0"/>
+      <path d="M36 5L5 36l-5-5L31 0l5 5" class="st0"/>
+    </svg> -->
   </label>
+  <div class="flyout-menu" id="flyout-menu">
+    <a href="/">Home</a>
+    <a href="/about">About Us</a>
+    <a href="/contact">Contact Us</a>
+    <a href="/join">Join Us</a>
+  </div>
 </header>

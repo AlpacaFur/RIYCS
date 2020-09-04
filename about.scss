@@ -2,3 +2,55 @@
 ---
 // {% include base.scss %}
 // {% include header.scss %}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 20px;
+  padding: 0px 20px;
+}
+
+h1, h2 {
+  color: $green;
+}
+
+ol {
+  li {
+    counter-increment: core-values;
+    list-style: none;
+    position: relative;
+    margin-left: 10px;
+    .list-item-title {
+      font-weight: bold;
+      font-size: 22px;
+    }
+    @media (max-width: 550px) {
+      margin-left: -10px;
+    }
+  }
+
+  li::before {
+    color: $green;
+    content: counter(core-values) "";
+    position: absolute;
+    left: -35px;
+    top: -17px;
+    font-size: 45px;
+    font-weight: bold;
+  }
+  li:nth-child(1)::before {
+    color:mix($green, $blue, 80%);
+  }
+  li:nth-child(2)::before {
+    color: mix($green, $blue, 60%);
+  }
+  li:nth-child(3)::before {
+    color: mix($green, $blue, 40%);
+  }
+  li:nth-child(4)::before {
+    color: mix($green, $blue, 20%);
+  }
+  li:nth-child(5)::before {
+    color: mix($green, $blue, 0%);
+  }
+}
