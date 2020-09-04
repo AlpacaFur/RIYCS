@@ -1,0 +1,55 @@
+---
+---
+// {% include base.scss %}
+// {% include header.scss %}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 20px;
+  padding: 0px 20px;
+}
+
+h1 {
+  color: $green;
+}
+h2 {
+  color: $text;
+  margin-left: 10px;
+}
+h3 {
+  margin-left: 10px;
+  margin-bottom: 0px;
+  color: transparentize($text, 0.5);
+}
+h3+p {
+  margin-top: 10px;
+  opacity: 0.5;
+}
+p {
+  margin-left: 40px;
+}
+.contact-pair {
+  span {
+    font-weight: bold;
+    color: $yellow;
+  }
+  a {
+    color: $green;
+  }
+}
+.social-media-row {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  margin-top: 20px;
+  svg {
+    fill: $text;
+    width: 35px;
+  }
+  a {
+    color: $green;
+    margin-left: 20px;
+    font-size: 25px;
+  }
+}
