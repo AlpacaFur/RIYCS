@@ -19,11 +19,34 @@ main {
   background-color: $yellow;
   padding: 7px 16px;
   border-radius: 12px;
-  font-size: 48px;
+  font-size: 28px;
   font-weight: bold;
   text-decoration: none;
   display: inline-block;
   &:hover {
     text-decoration: underline;
+  }
+}
+h1 {
+  color: $yellow;
+  margin-bottom: 10px;
+}
+p {
+  font-size: 24px;
+  margin-top: 0px;
+}
+a {
+  color: $green;
+}
+.ways-to-help {
+  margin-left: 10px;
+  $h2-instances: 5;
+  @for $i from 1 through $h2-instances {
+    h2:nth-of-type(#{$i}) {
+      color: mix($green, $blue, 100-(100*(($i - 1)/($h2-instances - 1))));
+    }
+  }
+  p {
+    margin-left: 15px;
   }
 }

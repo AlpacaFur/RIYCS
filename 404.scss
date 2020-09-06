@@ -1,0 +1,35 @@
+---
+---
+// {% include base.scss %}
+// {% include header.scss %}
+
+main {
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.four-oh-four {
+  color: $green;
+  font-size: 133px;
+  margin: 0px;
+  // width: 220px;
+}
+
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+  .four-oh-four {
+    background: linear-gradient(45deg, $green, $blue);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+h1, h2 {
+  font-size: 35px;
+}
+
+a {
+  color: $yellow;
+}

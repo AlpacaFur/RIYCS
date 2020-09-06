@@ -3,6 +3,21 @@
 // {% include base.scss %}
 // {% include header.scss %}
 
+@keyframes highlight-target {
+  25% {
+    border-color: transparent;
+    background-color: transparent;
+  }
+  50% {
+    border-color: $yellow;
+    background-color: $background-elevated;
+  }
+  75% {
+    border-color: transparent;
+    background-color: transparent;
+  }
+}
+
 main {
   max-width: 800px;
   margin: 0 auto;
@@ -12,6 +27,7 @@ main {
 
 h1 {
   color: $green;
+  // margin-top: 0px;
 }
 h2 {
   color: $text;
@@ -27,7 +43,7 @@ h3+p {
   opacity: 0.5;
 }
 p {
-  margin-left: 40px;
+  margin-left: 30px;
 }
 .contact-pair {
   span {
@@ -36,6 +52,19 @@ p {
   }
   a {
     color: $green;
+  }
+}
+#social-media {
+  padding: 0px 22px 25px 22px;
+  margin: 20px -15px 0px -15px;
+  border-radius: 15px;
+  h2 {
+    margin-left: 0;
+  }
+  &:target {
+    background-color: $background-elevated;
+    border: 3px solid $yellow;
+    animation: highlight-target 1s ease;
   }
 }
 .social-media-row {
